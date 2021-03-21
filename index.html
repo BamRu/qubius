@@ -23,16 +23,17 @@
             var camera = new BABYLON.ArcRotateCamera("Camera", 1, 0.8, 10, new BABYLON.Vector3(0, 0, 0), scene);
             scene.activeCamera.attachControl(canvas);
             
-            //var light0 = new BABYLON.PointLight("Omni", new BABYLON.Vector3(0, 0, 10), scene);
+            var light0 = new BABYLON.PointLight("Omni", new BABYLON.Vector3(0, 0, 10), scene);
 			
-            //BABYLON.SceneLoader.ImportMeshAsync("", "https://assets.babylonjs.com/meshes/", "village.glb");
+            BABYLON.SceneLoader.ImportMeshAsync("", "https://assets.babylonjs.com/meshes/", "village.glb");
 			//BABYLON.SceneLoader.ImportMeshAsync("","./Data/Model/Qubius.glb");
 			
-			BABYLON.SceneLoader.ImportMesh("", "./Data/Model/", "Qubius.glb", scene, function (meshes) {          
-				scene.createDefaultCameraOrLight(true, true, true);
-				scene.createDefaultEnvironment();
-        
-			});
+			//BABYLON.SceneLoader.ImportMesh("", "./Data/Model/", "Qubius.glb", scene, function (meshes) {          
+			//	scene.createDefaultCameraOrLight(true, true, true);
+			//	scene.createDefaultEnvironment(); 
+			//});
+			
+			
 			//./Data/Model/Qubius.glb
             return scene;
          };
